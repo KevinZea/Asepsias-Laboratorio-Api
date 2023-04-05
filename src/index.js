@@ -5,7 +5,7 @@ config()
 const port = process.env.PORT
 
 async function main() {
-    await sequelize.sync({ force: false })
+    await sequelize.sync({ force: true })
     app.listen(port);
     console.log("Server on port", port);
 }
