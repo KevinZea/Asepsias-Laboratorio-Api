@@ -1,11 +1,13 @@
 import app from "./app.js";
 import { sequelize } from "./database/database.js";
-
+import { config } from "dotenv";
+config()
+const port = process.env.PORT
 
 async function main() {
     await sequelize.sync({ force: false })
-    app.listen(3000);
-    console.log("Server on port 3000");
+    app.listen(port);
+    console.log("Server on port", port);
 }
 
 main();

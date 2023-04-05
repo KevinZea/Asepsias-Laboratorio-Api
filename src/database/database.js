@@ -4,12 +4,14 @@ config()
 
 const dbName = process.env.DBNAME
 const password = process.env.DB_PASSWORD
+const username = process.env.DB_USERNAME
+const dbHost = process.env.DB_HOST
 export const sequelize = new Sequelize(
     dbName, // db name,
-    "postgres", // username
+    username, // username
     password, // password
     {
-      host: "localhost",
+      host: dbHost,
       dialect: "postgres",
       // pool: {
       //   max: 5,
