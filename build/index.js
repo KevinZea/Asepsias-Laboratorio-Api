@@ -20,7 +20,7 @@ function _main() {
         case 0:
           _context.next = 2;
           return _database.sequelize.sync({
-            force: true
+            force: false
           });
         case 2:
           _app["default"].listen(port);
