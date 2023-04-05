@@ -16,7 +16,7 @@ var product = _database.sequelize.define("product", {
     type: _sequelize.DataTypes.STRING
   },
   description: {
-    type: _sequelize.DataTypes.STRING
+    type: _sequelize.DataTypes.TEXT
   },
   image: {
     type: _sequelize.DataTypes.STRING

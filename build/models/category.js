@@ -18,7 +18,7 @@ var category = _database.sequelize.define("category", {
     allowNull: false
   },
   description: {
-    type: _sequelize.DataTypes.STRING,
+    type: _sequelize.DataTypes.TEXT,
     allowNull: false
   }
 });
