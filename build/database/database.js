@@ -10,14 +10,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 (0, _dotenv.config)();
 var dbName = process.env.DBNAME;
 var password = process.env.DB_PASSWORD;
+var username = process.env.DB_USERNAME;
+var dbHost = process.env.DB_HOST;
 var sequelize = new _sequelize["default"](dbName,
 // db name,
-"postgres",
+username,
 // username
 password,
 // password
 {
-  host: "localhost",
+  host: dbHost,
   dialect: "postgres"
   // pool: {
   //   max: 5,
