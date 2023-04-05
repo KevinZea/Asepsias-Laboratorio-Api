@@ -12,15 +12,18 @@ var dbName = process.env.DBNAME;
 var password = process.env.DB_PASSWORD;
 var username = process.env.DB_USERNAME;
 var dbHost = process.env.DB_HOST;
+var dbPort = process.env.DB_PORT;
 var sequelize = new _sequelize["default"](dbName,
 // db name,
 username,
 // username
 password,
-// password
+//password
+
 {
   host: dbHost,
-  dialect: "postgres"
+  dialect: "postgres",
+  port: dbPort
   // pool: {
   //   max: 5,
   //   min: 0,
