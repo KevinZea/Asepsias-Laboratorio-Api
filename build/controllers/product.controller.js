@@ -105,7 +105,7 @@ function _getProductByTitle() {
         case 4:
           productResult = _context3.sent;
           result = productResult.filter(function (p) {
-            return p.title.includes(title);
+            return p.title.toLowerCase().includes(title.toLowerCase());
           });
           if (result.length > 0) {
             res.json(result);

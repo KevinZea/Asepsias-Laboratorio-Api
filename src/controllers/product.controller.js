@@ -34,7 +34,7 @@ export async function getProductByTitle(req, res){
     try {
         const {title} = req.params
         const productResult = await product.findAll()
-        const result = productResult.filter(p => p.title.includes(title))
+        const result = productResult.filter(p => p.title.toLowerCase().includes(title.toLowerCase()))
         if(result.length > 0){
             res.json(result)
         }
