@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+const cors = require('cors')
 
 const app = express();
 
@@ -7,6 +8,7 @@ const app = express();
 import productRoutes from "./routes/product.routes.js"
 import categoryRoutes from "./routes/category.routes.js"
 // Middlewares
+app.use(cors())
 app.use(morgan("dev"));
 app.use(express.json());
 

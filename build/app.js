@@ -9,11 +9,13 @@ var _morgan = _interopRequireDefault(require("morgan"));
 var _productRoutes = _interopRequireDefault(require("./routes/product.routes.js"));
 var _categoryRoutes = _interopRequireDefault(require("./routes/category.routes.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var cors = require('cors');
 var app = (0, _express["default"])();
 
 // Import routes
 
 // Middlewares
+app.use(cors());
 app.use((0, _morgan["default"])("dev"));
 app.use(_express["default"].json());
 
