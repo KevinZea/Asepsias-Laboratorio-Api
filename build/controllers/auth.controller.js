@@ -41,9 +41,8 @@ function _register() {
           token = _jsonwebtoken["default"].sign({
             id: newUser.id
           }, secretWord, {
-            expiresIn: 300 //86400
+            expiresIn: 86400
           });
-
           res.json(token);
           _context.next = 15;
           break;
@@ -104,7 +103,7 @@ function _login() {
           token = _jsonwebtoken["default"].sign({
             id: userfound.id
           }, secretWord, {
-            expiresIn: 300 //86400
+            expiresIn: 60 //86400
           });
 
           res.json({

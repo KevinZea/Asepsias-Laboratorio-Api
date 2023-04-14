@@ -15,7 +15,7 @@ export async function register(req, res){
             password: passwordCrypt
         })
         const token = jwt.sign({id: newUser.id}, secretWord,{
-            expiresIn: 300     //86400
+            expiresIn: 86400
         })
         res.json(token)
     } catch (error) {
@@ -41,7 +41,7 @@ export async function login(req, res){
         }
 
         const token = jwt.sign({id: userfound.id}, secretWord,{
-            expiresIn: 300     //86400
+            expiresIn: 60     //86400
         })
         res.json({token})
 
