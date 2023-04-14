@@ -41,7 +41,7 @@ export async function login(req, res){
         }
 
         const token = jwt.sign({id: userfound.id}, secretWord,{
-            expiresIn: 60     //86400
+            expiresIn: 86400
         })
         res.json({token})
 
