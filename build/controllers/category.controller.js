@@ -166,16 +166,16 @@ function _deleteCategory() {
           _context5.prev = 0;
           id = req.params.id;
           _context5.next = 4;
-          return _category.category.destroy({
+          return _product.product.destroy({
             where: {
-              id: id
+              categoryId: id
             }
           });
         case 4:
           _context5.next = 6;
-          return _product.product.destroy({
+          return _category.category.destroy({
             where: {
-              categoryId: id
+              id: id
             }
           });
         case 6:

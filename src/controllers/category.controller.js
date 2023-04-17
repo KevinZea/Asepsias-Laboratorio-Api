@@ -55,14 +55,15 @@ export async function updateCategory(req, res){
 export async function deleteCategory(req, res){
     try {
         const {id} = req.params
-        await category.destroy({
-            where:{
-                id
-            }
-        })
+        
         await product.destroy({
             where:{
                 categoryId: id
+            }
+        })
+        await category.destroy({
+            where:{
+                id
             }
         })
         return res.sendStatus(204)
